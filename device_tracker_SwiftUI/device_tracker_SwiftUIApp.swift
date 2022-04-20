@@ -11,16 +11,12 @@ import Firebase
 @main
 struct device_tracker_SwiftUIApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    @StateObject var viewModelStatus = StatusSelectorViewModel()
-    @StateObject var editProfileViewModel = EditProfileViewModel()
     var body: some Scene {
         WindowGroup {
-            MainTabView()
-
+            LoginView()
         }
     }
 }
-
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication,
