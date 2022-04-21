@@ -8,11 +8,24 @@
 import Foundation
 import Firebase
 import SwiftUI
+import FirebaseCore
+//import GoogleSignIn
+
 
 class AuthViewModel: NSObject, ObservableObject {
     @Published var didAuthticateUser = false
 
-    func login(username: String, password: String) {
+    func loginEmailPasswordViewModel(withEmail email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
+            if let error = error{
+                print(error.localizedDescription)
+                return
+            }
+            else{
+                self?.didAuthticateUser = true
+                print("login with user \(result?.user.email)")
+            }
+        }
 
     }
 
@@ -29,7 +42,9 @@ class AuthViewModel: NSObject, ObservableObject {
 
             let db = Firestore.firestore()
             db.collection("users").document(user.uid).setData(data) { _ in
+                print("Document successfully written!")
                 self.didAuthticateUser = true
+                print("didAuthticateUser: \(self.didAuthticateUser)")
             }
 
 

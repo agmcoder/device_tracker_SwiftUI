@@ -7,11 +7,18 @@ import SwiftUI
 struct LoginView: View {
     @ObservedObject var viewModel = LoginViewModel()
     @State var showAlert = false
-    @ObservedObject var authViewModel=AuthViewModel()
+    @ObservedObject var authViewModel = AuthViewModel()
 
     var body: some View {
         NavigationView {
             VStack {
+                NavigationLink(
+                        destination: MainTabView(),
+                        isActive: $authViewModel.didAuthticateUser,
+                        label: {}
+
+                )
+
 
                 Image("logo_firebase").resizable().scaledToFit().frame(width: 100, height: 100)
                 Text("LOG IN").font(.largeTitle).bold()
@@ -49,11 +56,11 @@ struct LoginView: View {
                             //we have to call emailandpassword login function
                             if (isValidEmail(viewModel.userNameValue) == true) {
                                 print("is valid email")
-                                viewModel.loginEmailPasswordViewModel()
-                                if (viewModel.isLoggingIn == true) {
-                                    print("is logged in")
+                                authViewModel.loginEmailPasswordViewModel(
+                                        withEmail: viewModel.userNameValue,
+                                        password: viewModel.passwordValue
+                                )
 
-                                }
 
                             } else {
                                 print("is not valid email")
@@ -61,6 +68,10 @@ struct LoginView: View {
                             }
                         }
                 )
+                        .frame(width: UIScreen.main.bounds.width - 32, height: 50)
+                        .background(Color.blue)
+                        .clipShape(Capsule())
+                        .foregroundColor(.white)
                 //.buttonStyle(GrowingButton())
                 Button(
                         action: {

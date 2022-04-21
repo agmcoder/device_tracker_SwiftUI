@@ -49,6 +49,9 @@ struct MainTabView: View {
             }
                     .navigationTitle(viewModel.tabTitle)
         }
+                .navigationBarBackButtonHidden(true)
+                .navigationBarHidden(true)
+
     }
 }
 

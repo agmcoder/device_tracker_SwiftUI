@@ -4,18 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64b853e9-3b56-46ac-9737-32852ee7486d" name="Changes" comment="sendmessage function has been implemented">
+    <list default="true" id="64b853e9-3b56-46ac-9737-32852ee7486d" name="Changes" comment="second commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/project.xcworkspace/xcuserdata/agmcoder.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/project.xcworkspace/xcuserdata/agmcoder.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/xcuserdata/agmcoder.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/xcuserdata/agmcoder.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/Firebase/AuthViewModel.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/Firebase/AuthViewModel.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/device_tracker_SwiftUIApp.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/device_tracker_SwiftUIApp.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/login/view/LoginView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/login/view/LoginView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/login/viewModel/LoginViewModel.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/login/viewModel/LoginViewModel.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/mainTab/view/MainTabView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/mainTab/view/MainTabView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/register/view/ProfilePhotoSelectorView.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/register/view/RegisterView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/register/view/RegisterView.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_03C4AC72-A7CA-46BE-97EA-05E1BD70C324" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_dcee91b662817dba7767c38b9c36405d0125e057" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -24,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -110,7 +116,9 @@
       <workItem from="1650449762286" duration="508000" />
       <workItem from="1650450333397" duration="3624000" />
       <workItem from="1650454192579" duration="1261000" />
-      <workItem from="1650480253945" duration="26000" />
+      <workItem from="1650480253945" duration="936000" />
+      <workItem from="1650481834620" duration="4428000" />
+      <workItem from="1650558386890" duration="2583000" />
     </task>
     <task id="LOCAL-00001" summary="workspace.xml">
       <created>1649758913471</created>
@@ -196,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650202397179</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="second commit">
+      <created>1650480306154</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1650480306154</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +240,7 @@
     <MESSAGE value="i have implemented the new message sheet and search filter." />
     <MESSAGE value="custominputField" />
     <MESSAGE value="sendmessage function has been implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="sendmessage function has been implemented" />
+    <MESSAGE value="second commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
   </component>
 </project>

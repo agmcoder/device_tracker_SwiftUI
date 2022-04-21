@@ -40,7 +40,6 @@
 		649B2CBA96DACF16A94B017F /* StatusSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649B262ED5720908669FCDCF /* StatusSelectorView.swift */; };
 		649B2CE17FE2AFF76506F3C0 /* StatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649B2ABBCA0129ECD2E5EB69 /* StatusCell.swift */; };
 		649B2D201CDC3C43702B55A4 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649B206421BC50C817A7FDB3 /* RegisterView.swift */; };
-		649B2D5089A4A7BCE3643BAD /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649B2CF9B06D7AD2B063A052 /* ProfilePhotoSelectorView.swift */; };
 		649B2D8D1990E58C386A018D /* GPSButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649B2EA4135CCBCF88C90EC1 /* GPSButtonView.swift */; };
 		649B2D9F8504314709CB2D77 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649B27937AC4A9FD0B3649FF /* AuthViewModel.swift */; };
 		649B2E214D5C72C090E0788F /* Check.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649B243C7EF3EACF13A3E015 /* Check.swift */; };
@@ -129,7 +128,6 @@
 		649B2BE3963C68C5C290C802 /* MainTabViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewModel.swift; sourceTree = "<group>"; };
 		649B2CCE0E88CD9763E01C4B /* SettingsHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsHeader.swift; sourceTree = "<group>"; };
 		649B2CF6400F23C6B21A3A53 /* UserStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
-		649B2CF9B06D7AD2B063A052 /* ProfilePhotoSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorView.swift; sourceTree = "<group>"; };
 		649B2D3F639E6BD1D4807874 /* GPSButtonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSButtonViewModel.swift; sourceTree = "<group>"; };
 		649B2DE4DBA8882031E0DFA8 /* device_tracker_SwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = device_tracker_SwiftUIUITests.swift; sourceTree = "<group>"; };
 		649B2EA4135CCBCF88C90EC1 /* GPSButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSButtonView.swift; sourceTree = "<group>"; };
@@ -138,6 +136,7 @@
 		9E1FFDE62805838800A4C3ED /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		9E1FFDE8280583B900A4C3ED /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		9E311D12281036C400B31597 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9E311D142810B99700B31597 /* device-tracker-SwiftUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "device-tracker-SwiftUI-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9E57B0AC2808CF3900C42C86 /* StatusSelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusSelectorViewModel.swift; sourceTree = "<group>"; };
 		9EB6ADE62809D900001F5631 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		9EFA3E5F280B221600231E22 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -357,7 +356,6 @@
 			isa = PBXGroup;
 			children = (
 				649B206421BC50C817A7FDB3 /* RegisterView.swift */,
-				649B2CF9B06D7AD2B063A052 /* ProfilePhotoSelectorView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -443,6 +441,7 @@
 		649B2D86245DFFF927BD3777 /* device_tracker_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				9E311D142810B99700B31597 /* device-tracker-SwiftUI-Info.plist */,
 				9E311D12281036C400B31597 /* GoogleService-Info.plist */,
 				9EFA3E5E280B0BF700231E22 /* useCases */,
 				9E1FFDE5280582DE00A4C3ED /* components */,
@@ -712,7 +711,6 @@
 				649B252F8FB86A915E40990C /* ChatView.swift in Sources */,
 				649B24C67FE937DF502A3EF1 /* MessageView.swift in Sources */,
 				649B291B031F99E02A7C8069 /* CustomInputView.swift in Sources */,
-				649B2D5089A4A7BCE3643BAD /* ProfilePhotoSelectorView.swift in Sources */,
 				649B2D9F8504314709CB2D77 /* AuthViewModel.swift in Sources */,
 				649B2143A52922FA3253559B /* ProfilePhotoView.swift in Sources */,
 			);
@@ -760,6 +758,7 @@
 				DEVELOPMENT_TEAM = 8WHNXCK73W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "device-tracker-SwiftUI-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -818,6 +817,7 @@
 				DEVELOPMENT_TEAM = 8WHNXCK73W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "device-tracker-SwiftUI-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

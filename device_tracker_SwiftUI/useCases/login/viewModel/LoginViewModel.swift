@@ -13,25 +13,13 @@ class LoginViewModel:ObservableObject{
     //var to check if the password is visible
     @Published var isPasswordVisible = false
 
-    @Published var isLoggingIn = false
 
     //Error alerts
-    @Published var userNameError: String?
-    @Published var passwordError: String?
-    @Published var alert=false
-    @Published var alertMessage:String?
 
-    @Published private(set) var gpsState=false
 
-    init(){
-        //self.userSession=Auth.auth().currentUser
-    }
-    func loginEmailPasswordViewModel(){
-        //call loginEmailPasswordViewModel
-        // let auth=AuthenticationService()
-        //auth.loginEmailPasswordService(email: userNameValue, password: passwordValue)
-        return
-    }
+
+    init(){}
+
 
     func loadGPSState(){
 
