@@ -9,6 +9,7 @@ import Foundation
 import Firebase
 import SwiftUI
 import FirebaseCore
+import UIKit
 //import GoogleSignIn
 
 
@@ -53,7 +54,19 @@ class AuthViewModel: NSObject, ObservableObject {
 
 
 func uploadProfileImage(_ image: UIImage) {
+    guard let uid=Auth.auth().currentUser?.uid else {return}
 
+    ImageUploader.uploadImage(image:image) { url in
+        let db = Firestore.firestore()
+        db.collection("users").document(uid).updateData(["profileImageURL": url76]){
+            err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Document successfully updated")
+            }
+        }
+    }
 }
 
 

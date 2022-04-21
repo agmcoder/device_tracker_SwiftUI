@@ -15,7 +15,7 @@ struct RegisterView: View {
         VStack {
             //navigation to profile selector view
             NavigationLink(
-                    destination: ProfilePhotoView(),
+                    destination: ProfilePhotoView().navigationBarBackButtonHidden(true),
                     isActive: $authViewModel.didAuthticateUser,
                     label: {}
 

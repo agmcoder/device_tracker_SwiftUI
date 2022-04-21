@@ -13,7 +13,9 @@ struct LoginView: View {
         NavigationView {
             VStack {
                 NavigationLink(
-                        destination: MainTabView(),
+                        destination: MainTabView()
+                                .navigationBarBackButtonHidden(true)
+                                .navigationBarHidden(true),
                         isActive: $authViewModel.didAuthticateUser,
                         label: {}
 

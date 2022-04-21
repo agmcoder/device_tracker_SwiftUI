@@ -10,6 +10,7 @@
 		649B201E5CB2AD94190AB050 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649B2A25A6FD31A5781FB202 /* Message.swift */; };
 		649B2024FBE2EFB72175985D /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649B21C7DEF5FBFD3F3EF262 /* ChatViewModel.swift */; };
 		649B209109A6FC906D76BCB0 /* NewMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649B2302CA12EFE201B8AA86 /* NewMessageViewModel.swift */; };
+		649B20CB0FDC20503833C1D4 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649B27D995288442385C94E1 /* ImageUploader.swift */; };
 		649B212D02DD0FE1D75EE53C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649B27F2DBFF681A0512160C /* LoginView.swift */; };
 		649B2143A52922FA3253559B /* ProfilePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649B2653745D14E8E5FFCD5B /* ProfilePhotoView.swift */; };
 		649B2224A3DAAABBD01CF846 /* MainTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649B2BE3963C68C5C290C802 /* MainTabViewModel.swift */; };
@@ -111,6 +112,7 @@
 		649B273727227C840788198D /* ConversationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		649B27827C46E303B30C76D8 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		649B27937AC4A9FD0B3649FF /* AuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		649B27D995288442385C94E1 /* ImageUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		649B27F2DBFF681A0512160C /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		649B2825F6B997D54967E521 /* SettingsCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCellViewModel.swift; sourceTree = "<group>"; };
 		649B288FCC8D5E9E07A9B052 /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -454,8 +456,17 @@
 				649B26BD9C20B0A7F39DDCBB /* utils */,
 				649B282988575E0F886EC99F /* model */,
 				649B2E7C1292C772D3B3621F /* Firebase */,
+				649B2DD485D0333B57EAD2C1 /* API */,
 			);
 			path = device_tracker_SwiftUI;
+			sourceTree = "<group>";
+		};
+		649B2DD485D0333B57EAD2C1 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				649B27D995288442385C94E1 /* ImageUploader.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		649B2E7C1292C772D3B3621F /* Firebase */ = {
@@ -713,6 +724,7 @@
 				649B291B031F99E02A7C8069 /* CustomInputView.swift in Sources */,
 				649B2D9F8504314709CB2D77 /* AuthViewModel.swift in Sources */,
 				649B2143A52922FA3253559B /* ProfilePhotoView.swift in Sources */,
+				649B20CB0FDC20503833C1D4 /* ImageUploader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
