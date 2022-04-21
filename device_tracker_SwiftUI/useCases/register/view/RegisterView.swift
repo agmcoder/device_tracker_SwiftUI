@@ -6,7 +6,7 @@ import SwiftUI
 
 struct RegisterView: View {
     @ObservedObject var registerViewModel = RegisterViewModel()
-    @ObservedObject var authViewModel=AuthViewModel()
+    @EnvironmentObject var authViewModel: AuthViewModel
     @State var showAlert = false
     @Environment(\.presentationMode) var mode
 
@@ -15,8 +15,10 @@ struct RegisterView: View {
         VStack {
             //navigation to profile selector view
             NavigationLink(
-                    destination: ProfilePhotoView().navigationBarBackButtonHidden(true),
-                    isActive: $authViewModel.didAuthticateUser,
+                    destination: ProfilePhotoView()
+                            .navigationBarBackButtonHidden(true)
+                    ,
+                    isActive: $authViewModel.didRegisterUser,
                     label: {}
 
             )
@@ -64,6 +66,11 @@ struct RegisterView: View {
                         }
                     }
             )
+                    .frame(width: UIScreen.main.bounds.width - 32, height: 50)
+                    .foregroundColor(.white)
+                    .background(Color.blue)
+                    .clipShape(Capsule())
+                    .padding()
             // .buttonStyle(GrowingButton())
             Button(
                     action: {

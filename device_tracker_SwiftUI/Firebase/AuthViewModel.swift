@@ -14,7 +14,17 @@ import UIKit
 
 
 class AuthViewModel: NSObject, ObservableObject {
-    @Published var didAuthticateUser = false
+    @Published var userSession : FirebaseAuth.User?
+    @Published var didRegisterUser = false
+    @Published var didLoginUser = false
+    @Published var didUpdatePhotoProfileView=false
+    private var tempCurrentUser:FirebaseAuth.User?
+
+    override init(){
+        super.init()
+        self.userSession = Auth.auth().currentUser
+        self.tempCurrentUser = Auth.auth().currentUser
+    }
 
     func loginEmailPasswordViewModel(withEmail email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
@@ -22,10 +32,8 @@ class AuthViewModel: NSObject, ObservableObject {
                 print(error.localizedDescription)
                 return
             }
-            else{
-                self?.didAuthticateUser = true
-                print("login with user \(result?.user.email)")
-            }
+            guard let user = result?.user else { return }
+            self?.userSession=user
         }
 
     }
@@ -39,13 +47,14 @@ class AuthViewModel: NSObject, ObservableObject {
             guard let user = result?.user else {
                 return
             }
+            self.tempCurrentUser = user
             let data: [String: Any] = ["email": email, "password": password, "user": user.uid]
 
             let db = Firestore.firestore()
             db.collection("users").document(user.uid).setData(data) { _ in
                 print("Document successfully written!")
-                self.didAuthticateUser = true
-                print("didAuthticateUser: \(self.didAuthticateUser)")
+                self.didRegisterUser = true
+                print("didAuthticateUser: \(self.didRegisterUser)")
             }
 
 
@@ -54,16 +63,18 @@ class AuthViewModel: NSObject, ObservableObject {
 
 
 func uploadProfileImage(_ image: UIImage) {
-    guard let uid=Auth.auth().currentUser?.uid else {return}
+    print("uploadProfileImage")
+    guard let uid=tempCurrentUser?.uid else {return}
 
     ImageUploader.uploadImage(image:image) { url in
         let db = Firestore.firestore()
-        db.collection("users").document(uid).updateData(["profileImageURL": url76]){
+        db.collection("users").document(uid).updateData(["profileImageURL": url]){
             err in
             if let err = err {
                 print("Error updating document: \(err)")
             } else {
-                print("Document successfully updated")
+                print("Document successfully updated with url: \(url)")
+                self.didUpdatePhotoProfileView=true
             }
         }
     }
@@ -71,6 +82,8 @@ func uploadProfileImage(_ image: UIImage) {
 
 
 func logout() {
+    self.userSession = nil
+    try? Auth.auth().signOut()
 }
 
 

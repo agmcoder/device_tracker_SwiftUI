@@ -8,23 +8,29 @@
 
 import SwiftUI
 import Firebase
+
 @main
 struct device_tracker_SwiftUIApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            ContentView()
+                    .environmentObject(AuthViewModel())
+
         }
     }
 }
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions:
-                     [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+                             [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         return true
     }
+
     //it is needed to implement google registration
     /*@available(iOS 9.0, *)
     func application(_ application: UIApplication, open url: URL,
@@ -33,5 +39,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       return GIDSignIn.sharedInstance.handle(url)
     }*/
 
-    
+
 }

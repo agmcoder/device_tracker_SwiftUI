@@ -7,7 +7,7 @@ import SwiftUI
 struct LoginView: View {
     @ObservedObject var viewModel = LoginViewModel()
     @State var showAlert = false
-    @ObservedObject var authViewModel = AuthViewModel()
+    @EnvironmentObject var authViewModel: AuthViewModel
 
     var body: some View {
         NavigationView {
@@ -16,7 +16,7 @@ struct LoginView: View {
                         destination: MainTabView()
                                 .navigationBarBackButtonHidden(true)
                                 .navigationBarHidden(true),
-                        isActive: $authViewModel.didAuthticateUser,
+                        isActive: $authViewModel.didLoginUser,
                         label: {}
 
                 )
@@ -74,6 +74,7 @@ struct LoginView: View {
                         .background(Color.blue)
                         .clipShape(Capsule())
                         .foregroundColor(.white)
+                        .padding()
                 //.buttonStyle(GrowingButton())
                 Button(
                         action: {

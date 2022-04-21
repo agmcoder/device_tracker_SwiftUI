@@ -5,11 +5,14 @@
 import SwiftUI
 //swiftui view of a logout button how whatsapp settingsCells
 struct LogOut: View {
+    @EnvironmentObject var authViewModel : AuthViewModel
     @Environment(\.colorScheme) var colorScheme:ColorScheme
 
     var body: some View {
+
         Button(action: {
-           // self.settings.logOut()
+           authViewModel.userSession=nil
+            NavigationLink(destination: ContentView(),label:{})
         }) {
             HStack {
                 Spacer()

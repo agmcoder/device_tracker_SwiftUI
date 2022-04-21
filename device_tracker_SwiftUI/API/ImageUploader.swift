@@ -8,7 +8,9 @@ import UIKit
 import FirebaseStorage
 //struc ImageUploader to firebase storage and upload image
 struct ImageUploader {
+
     static func uploadImage(image: UIImage, completion: @escaping (String)-> Void){
+        print("inside uploadImage")
         guard let imageData = image.jpegData(compressionQuality: 0.5) else {return}
         let filename = NSUUID().uuidString
         let ref = Storage.storage().reference(withPath: "/profileImages/\(filename)")
