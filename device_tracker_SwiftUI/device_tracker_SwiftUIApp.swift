@@ -8,7 +8,6 @@
 
 import SwiftUI
 import Firebase
-
 @main
 struct device_tracker_SwiftUIApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
