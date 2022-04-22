@@ -4,24 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64b853e9-3b56-46ac-9737-32852ee7486d" name="Changes" comment="uploadProfileImage done">
+    <list default="true" id="64b853e9-3b56-46ac-9737-32852ee7486d" name="Changes" comment="signin and logout not completed yet.">
+      <change afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/model/User.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/project.xcworkspace/xcuserdata/agmcoder.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/project.xcworkspace/xcuserdata/agmcoder.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/API/ImageUploader.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/API/ImageUploader.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/ContentView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/ContentView.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/Firebase/AuthViewModel.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/Firebase/AuthViewModel.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/device_tracker_SwiftUIApp.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/device_tracker_SwiftUIApp.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/login/view/LoginView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/login/view/LoginView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/mainTab/settings/view/LogOut.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/mainTab/settings/view/LogOut.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/register/view/RegisterView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/register/view/RegisterView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/utils/ProfilePhotoView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/utils/ProfilePhotoView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/mainTab/settings/view/SettingsHeader.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/mainTab/settings/view/SettingsHeader.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/mainTab/settings/view/SettingsView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/mainTab/settings/view/SettingsView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/mainTab/view/MainTabView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/mainTab/view/MainTabView.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_dcee91b662817dba7767c38b9c36405d0125e057" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_6AC768EA-7354-4339-AA65-AA1DF944EBB5" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -42,6 +41,10 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="JsBowerSettings">
+    <bower-package value="" />
+    <bower.json value="" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -67,7 +70,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Bower" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -118,7 +121,8 @@
       <workItem from="1650454192579" duration="1261000" />
       <workItem from="1650480253945" duration="936000" />
       <workItem from="1650481834620" duration="4428000" />
-      <workItem from="1650558386890" duration="15522000" />
+      <workItem from="1650558386890" duration="15688000" />
+      <workItem from="1650632791084" duration="4910000" />
     </task>
     <task id="LOCAL-00001" summary="workspace.xml">
       <created>1649758913471</created>
@@ -225,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650566998395</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="signin and logout not completed yet.">
+      <created>1650581708226</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1650581708226</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +268,11 @@
     <MESSAGE value="second commit" />
     <MESSAGE value="error when navigate to maintabview" />
     <MESSAGE value="uploadProfileImage done" />
-    <option name="LAST_COMMIT_MESSAGE" value="uploadProfileImage done" />
+    <MESSAGE value="signin and logout not completed yet." />
+    <option name="LAST_COMMIT_MESSAGE" value="signin and logout not completed yet." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

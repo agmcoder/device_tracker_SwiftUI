@@ -10,30 +10,35 @@ import Firebase
 import SwiftUI
 import FirebaseCore
 import UIKit
+
 //import GoogleSignIn
 
 
 class AuthViewModel: NSObject, ObservableObject {
-    @Published var userSession : FirebaseAuth.User?
+    @Published var userSession: FirebaseAuth.User?
     @Published var didRegisterUser = false
     @Published var didLoginUser = false
-    @Published var didUpdatePhotoProfileView=false
-    private var tempCurrentUser:FirebaseAuth.User?
+    @Published var didUpdatePhotoProfileView = false
+    private var tempCurrentUser: FirebaseAuth.User?
+    @Published var currentUser: User?
 
-    override init(){
+    override init() {
         super.init()
         self.userSession = Auth.auth().currentUser
-        self.tempCurrentUser = Auth.auth().currentUser
+        fetchUser()
     }
 
     func loginEmailPasswordViewModel(withEmail email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
-            if let error = error{
+            if let error = error {
                 print(error.localizedDescription)
                 return
             }
-            guard let user = result?.user else { return }
-            self?.userSession=user
+            guard let user = result?.user else {
+                return
+            }
+            self?.userSession = user
+            self.fetchUser()
         }
 
     }
@@ -62,29 +67,46 @@ class AuthViewModel: NSObject, ObservableObject {
     }
 
 
-func uploadProfileImage(_ image: UIImage) {
-    print("uploadProfileImage")
-    guard let uid=tempCurrentUser?.uid else {return}
+    func uploadProfileImage(_ image: UIImage) {
+        print("uploadProfileImage")
+        guard let uid = tempCurrentUser?.uid else {
+            return
+        }
 
-    ImageUploader.uploadImage(image:image) { url in
-        let db = Firestore.firestore()
-        db.collection("users").document(uid).updateData(["profileImageURL": url]){
-            err in
-            if let err = err {
-                print("Error updating document: \(err)")
-            } else {
-                print("Document successfully updated with url: \(url)")
-                self.didUpdatePhotoProfileView=true
+        ImageUploader.uploadImage(image: image) { url in
+            let db = Firestore.firestore()
+            db.collection("users").document(uid).updateData(["profileImageURL": url]) {
+                err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    print("Document successfully updated with url: \(url)")
+                    self.didUpdatePhotoProfileView = true
+                }
+                self.userSession = self.tempCurrentUser
             }
         }
     }
-}
+
+    func fetchUser() {
+        guard let uid = userSession?.uid else {
+            return
+        }
+        let db = Firestore.firestore()
+        db.collection("users").document(uid).getDocument { (document, error) in
+            guard let user = try? document.data(as: User.self) else {
+                return
+            }
+            self.currentUser = user
+            print("DEBUG: user object is \(user)")
+        }
+    }
 
 
-func logout() {
-    self.userSession = nil
-    try? Auth.auth().signOut()
-}
+    func logout() {
+        self.userSession = nil
+        try? Auth.auth().signOut()
+    }
 
 
 }

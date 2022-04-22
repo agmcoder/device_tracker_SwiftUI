@@ -6,12 +6,17 @@
 import SwiftUI
 
 struct SettingsView: View {
+    private let user:User
+    init(user:User){
+
+    }
     var body: some View {
+
         ZStack {
             Color(.systemGroupedBackground)
                     .ignoresSafeArea()
             VStack(spacing: 32) {
-                SettingsHeader()
+                SettingsHeader(user:user)
                 VStack(spacing: 1) {
 
                         ForEach(SettingsCellViewModel.allCases, id: \.self) { viewModel in
@@ -27,8 +32,4 @@ struct SettingsView: View {
     }
 }
 
-struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsView()
-    }
-}
+

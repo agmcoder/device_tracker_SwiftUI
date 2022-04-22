@@ -3,11 +3,16 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct SettingsHeader: View {
+    private let user:User
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     @ObservedObject var viewModelStatus = StatusSelectorViewModel()
     @ObservedObject var editProfileViewModel=EditProfileViewModel()
+    init(user:User){
+        self.user=user
+    }
     
 
     var body: some View {
@@ -20,8 +25,8 @@ struct SettingsHeader: View {
 
             HStack {
                 if let profileImage =
-                editProfileViewModel.profileImage {
-                    profileImage
+                user.profileImageURL {
+                    KFImage(URL(profileImage))
                             .resizable()
                             .frame(width: 64, height: 64)
                             .scaledToFill()
@@ -38,7 +43,7 @@ struct SettingsHeader: View {
                             .shadow(radius: 10)
                 }
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("alexgmp6")
+                    Text(user.email)
                             .font(.system(size: 18))
                     Text(viewModelStatus.currentStatus.title)
                             .font(.system(size: 14))
