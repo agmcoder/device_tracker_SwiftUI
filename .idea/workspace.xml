@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64b853e9-3b56-46ac-9737-32852ee7486d" name="Changes" comment="user object an settings header photo but main tab view doesnt work">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="64b853e9-3b56-46ac-9737-32852ee7486d" name="Changes" comment="error">
+      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/project.xcworkspace/xcuserdata/agmcoder.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/project.xcworkspace/xcuserdata/agmcoder.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/Firebase/AuthViewModel.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/Firebase/AuthViewModel.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/mainTab/settings/view/SettingsHeader.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/mainTab/settings/view/SettingsHeader.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/device_tracker_SwiftUIApp.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/device_tracker_SwiftUIApp.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +116,7 @@
       <workItem from="1650480253945" duration="936000" />
       <workItem from="1650481834620" duration="4428000" />
       <workItem from="1650558386890" duration="15688000" />
-      <workItem from="1650632791084" duration="5880000" />
+      <workItem from="1650632791084" duration="6237000" />
     </task>
     <task id="LOCAL-00001" summary="workspace.xml">
       <created>1649758913471</created>
@@ -238,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650643115700</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="error">
+      <created>1650645783229</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1650645783229</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +278,8 @@
     <MESSAGE value="uploadProfileImage done" />
     <MESSAGE value="signin and logout not completed yet." />
     <MESSAGE value="user object an settings header photo but main tab view doesnt work" />
-    <option name="LAST_COMMIT_MESSAGE" value="user object an settings header photo but main tab view doesnt work" />
+    <MESSAGE value="error" />
+    <option name="LAST_COMMIT_MESSAGE" value="error" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
