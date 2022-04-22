@@ -26,7 +26,7 @@ struct SettingsHeader: View {
             HStack {
                 if let profileImage =
                 user.profileImageURL {
-                    KFImage(URL(profileImage))
+                    KFImage(URL(string:profileImage))
                             .resizable()
                             .frame(width: 64, height: 64)
                             .scaledToFill()
@@ -61,8 +61,4 @@ struct SettingsHeader: View {
 
 }
 
-struct SettingsHeader_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsHeader()
-    }
-}
+

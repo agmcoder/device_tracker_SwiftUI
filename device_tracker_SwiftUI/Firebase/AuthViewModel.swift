@@ -38,7 +38,7 @@ class AuthViewModel: NSObject, ObservableObject {
                 return
             }
             self?.userSession = user
-            self.fetchUser()
+            self?.fetchUser()
         }
 
     }
@@ -94,7 +94,7 @@ class AuthViewModel: NSObject, ObservableObject {
         }
         let db = Firestore.firestore()
         db.collection("users").document(uid).getDocument { (document, error) in
-            guard let user = try? document.data(as: User.self) else {
+            guard let user = try? document?.data(as: User.self) else {
                 return
             }
             self.currentUser = user

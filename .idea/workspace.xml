@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64b853e9-3b56-46ac-9737-32852ee7486d" name="Changes" comment="signin and logout not completed yet.">
-      <change afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/model/User.swift" afterDir="false" />
+    <list default="true" id="64b853e9-3b56-46ac-9737-32852ee7486d" name="Changes" comment="user object an settings header photo but main tab view doesnt work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/project.xcworkspace/xcuserdata/agmcoder.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI.xcodeproj/project.xcworkspace/xcuserdata/agmcoder.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/Firebase/AuthViewModel.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/Firebase/AuthViewModel.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/mainTab/settings/view/SettingsHeader.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/mainTab/settings/view/SettingsHeader.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/mainTab/settings/view/SettingsView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/mainTab/settings/view/SettingsView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/mainTab/view/MainTabView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/device_tracker_SwiftUI/useCases/mainTab/view/MainTabView.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +117,7 @@
       <workItem from="1650480253945" duration="936000" />
       <workItem from="1650481834620" duration="4428000" />
       <workItem from="1650558386890" duration="15688000" />
-      <workItem from="1650632791084" duration="4910000" />
+      <workItem from="1650632791084" duration="5880000" />
     </task>
     <task id="LOCAL-00001" summary="workspace.xml">
       <created>1649758913471</created>
@@ -236,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650581708226</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="user object an settings header photo but main tab view doesnt work">
+      <created>1650643115700</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1650643115700</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +271,8 @@
     <MESSAGE value="error when navigate to maintabview" />
     <MESSAGE value="uploadProfileImage done" />
     <MESSAGE value="signin and logout not completed yet." />
-    <option name="LAST_COMMIT_MESSAGE" value="signin and logout not completed yet." />
+    <MESSAGE value="user object an settings header photo but main tab view doesnt work" />
+    <option name="LAST_COMMIT_MESSAGE" value="user object an settings header photo but main tab view doesnt work" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
